@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CheBR | Articula tu estilo</title>
+    <meta name="description"
+        content="Llaveros articulables con diseños únicos para jóvenes. Articula tu estilo con CheBR.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- HERO SECTION -->
+    <header class="hero section-animate">
+        <div class="hero-content">
+            <img src="assets/logo.png" alt="Logo CheBR" class="logo">
+            <h1 class="slogan">Articula tu <span class="highlight">estilo</span>.</h1>
+            <p class="hero-description">Llaveros articulables diseñados para darle movimiento a tu día a día.</p>
+            <a href="#catalogo" class="btn-primary">Ver colección</a>
+        </div>
+        <div class="hero-decorations">
+            <!-- Decorative blur elements -->
+            <div class="blur red-blur"></div>
+            <div class="blur beige-blur"></div>
+        </div>
+    </header>
+
+    <!-- CATALOGO SECTION -->
+    <section id="catalogo" class="catalog-section">
+        <h2 class="section-title section-animate">Nuestra Colección</h2>
+
+        <div class="grid-container">
+
+            <!-- Modelo 1 -->
+            <article class="product-card section-animate">
+                <div class="card-image-wrapper">
+                    <img src="assets/ajolote.png" alt="Llavero Ajolote" class="product-img">
+                </div>
+                <div class="card-info">
+                    <h3 class="product-name">Ajolote</h3>
+                    <p class="product-desc">Tierno, flexible y listo para acompañarte. Un clásico infalible.</p>
+                    <div class="price-container">
+                        <span class="price-old">S/ 10.00</span>
+                        <span class="price-new">S/ 6.50</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Modelo 2 -->
+            <article class="product-card section-animate delay-1">
+                <div class="card-image-wrapper">
+                    <img src="assets/unicornio.png" alt="Llavero Unicornio" class="product-img">
+                </div>
+                <div class="card-info">
+                    <h3 class="product-name">Unicornio</h3>
+                    <p class="product-desc">Magia en cada eslabón. Un toque de fantasía para tus llaves.</p>
+                    <div class="price-container">
+                        <span class="price-old">S/ 10.00</span>
+                        <span class="price-new">S/ 6.50</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Modelo 3 -->
+            <article class="product-card section-animate delay-2">
+                <div class="card-image-wrapper">
+                    <img src="assets/dinosaurio.png" alt="Llavero Dinosaurio" class="product-img">
+                </div>
+                <div class="card-info">
+                    <h3 class="product-name">Dinosaurio</h3>
+                    <p class="product-desc">Un T-Rex esqueleto articulable con actitud jurásica.</p>
+                    <div class="price-container">
+                        <span class="price-old">S/ 12.00</span>
+                        <span class="price-new">S/ 7.00</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Modelo 4 -->
+            <article class="product-card section-animate delay-3">
+                <div class="card-image-wrapper">
+                    <img src="assets/chuwi.png" alt="Llavero Chuwi" class="product-img">
+                </div>
+                <div class="card-info">
+                    <h3 class="product-name">Chuwi</h3>
+                    <p class="product-desc">Nuestro osito lover del café. Tu compañero matutino ideal.</p>
+                    <div class="price-container">
+                        <span class="price-old">S/ 12.00</span>
+                        <span class="price-new">S/ 7.00</span>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- CONTACTO / PEDIDOS -->
+    <section id="pedidos" class="contact-section section-animate">
+        <div class="contact-container">
+            <h2 class="section-title">Haz tu pedido</h2>
+            <p class="contact-subtitle">¿Encontraste tu favorito? Déjanos tus datos y nos pondremos en contacto contigo.
+            </p>
+
+            <form id="orderForm" class="order-form">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" id="correo" name="correo" placeholder="tu@correo.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="modelo">Modelo de interés</label>
+                    <select id="modelo" name="modelo" required>
+                        <option value="" disabled selected>Selecciona un modelo</option>
+                        <option value="ajolote">Ajolote</option>
+                        <option value="unicornio">Unicornio</option>
+                        <option value="dinosaurio">Dinosaurio</option>
+                        <option value="chuwi">Chuwi</option>
+                        <option value="varios">Me interesan varios</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">Mensaje (Opcional)</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Algún detalle adicional..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary btn-submit">Enviar pedido</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- MODAL DE ÉXITO -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-icon">🎉</div>
+            <h2 class="modal-title">¡Ahora perteneces al team CheBR!</h2>
+            <p class="modal-text">Te estamos redirigiendo a WhatsApp para finalizar tu pedido...</p>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="assets/logo.png" alt="Logo CheBR" class="footer-logo">
+                <p>Articula tu estilo.</p>
+            </div>
+            <div class="footer-socials">
+                <a href="#" aria-label="Instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-instagram">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+                <a href="#" aria-label="TikTok">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5v3a8 8 0 0 1-5-1.5z"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 CheBR Llaveros. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
