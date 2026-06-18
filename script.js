@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Crear el mensaje formateado
             const mensajeOriginal = data.mensaje ? `\n\n*Mensaje extra:* ${data.mensaje}` : '';
-            const whatsappText = `¡Hola CheBR! 🦖🦄\n\nQuiero hacer un pedido:\n*Nombre:* ${data.nombre}\n*Modelo elegido:* ${data.modelo}\n*Correo:* ${data.correo}${mensajeOriginal}\n\n¡Quedo atento(a)!`;
+            const whatsappText = `¡Hola CheBR! ⚽🎁\n\nQuiero hacer un pedido especial por el Día del Padre:\n*Nombre:* ${data.nombre}\n*Modelo elegido:* ${data.modelo}\n*Correo:* ${data.correo}${mensajeOriginal}\n\n¡Quedo atento(a) para finalizar la compra!`;
 
             // Codificar el texto para la URL
             const encodedText = encodeURIComponent(whatsappText);
