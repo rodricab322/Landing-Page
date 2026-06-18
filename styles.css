@@ -1,11 +1,11 @@
 /* VARIABLES */
 :root {
-    --color-primary: #CC0000;
-    --color-primary-dark: #A30000;
-    --color-secondary: #F5E6D3;
-    --color-bg: #FCF9F5;
-    --color-text: #1A1A1A;
-    --color-text-light: #4A4A4A;
+    --color-primary: #1d4ed8;       /* Royal Blue */
+    --color-primary-dark: #1e3a8a;  /* Deep Navy */
+    --color-secondary: #dbeafe;     /* Light blue accent */
+    --color-bg: #f8fafc;            /* Cool slate background */
+    --color-text: #0f172a;          /* Dark slate */
+    --color-text-light: #475569;    /* Medium slate */
     --color-white: #FFFFFF;
     
     --font-main: 'Outfit', sans-serif;
@@ -14,9 +14,9 @@
     --transition-medium: 0.4s ease;
     --transition-slow: 0.8s cubic-bezier(0.25, 1, 0.5, 1);
     
-    --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.08);
-    --shadow-lg: 0 20px 40px rgba(204, 0, 0, 0.15);
+    --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.03);
+    --shadow-md: 0 10px 30px rgba(15, 23, 42, 0.06);
+    --shadow-lg: 0 20px 40px rgba(29, 78, 216, 0.15);
 }
 
 /* RESET & BASE */
@@ -117,7 +117,7 @@ h1, h2, h3 {
 .logo {
     width: 150px;
     margin: 0 auto 2rem;
-    filter: drop-shadow(0 10px 20px rgba(204, 0, 0, 0.2));
+    filter: drop-shadow(0 10px 20px rgba(29, 78, 216, 0.2));
     animation: float 6s ease-in-out infinite;
 }
 
@@ -154,7 +154,7 @@ h1, h2, h3 {
     animation: move 20s infinite alternate;
 }
 
-.red-blur {
+.blue-blur {
     background-color: var(--color-primary);
     width: 400px;
     height: 400px;
@@ -162,8 +162,8 @@ h1, h2, h3 {
     right: -100px;
 }
 
-.beige-blur {
-    background-color: #E5CBA8;
+.sky-blur {
+    background-color: #93c5fd;
     width: 500px;
     height: 500px;
     bottom: -150px;
@@ -475,8 +475,126 @@ h1, h2, h3 {
         text-align: center;
     }
     
-    .red-blur, .beige-blur {
+    .blue-blur, .sky-blur {
         width: 300px;
         height: 300px;
     }
+}
+
+/* PROMO BANNER */
+.promo-banner {
+    background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary));
+    color: var(--color-white);
+    text-align: center;
+    padding: 0.75rem 1rem;
+    font-weight: 700;
+    font-size: 0.95rem;
+    position: relative;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    letter-spacing: 0.02em;
+}
+
+.promo-banner .banner-icon {
+    display: inline-block;
+    animation: rotate-ball 5s linear infinite;
+    font-size: 1.2rem;
+}
+
+/* FLOATING SOCCER BALLS */
+.soccer-ball-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.soccer-ball {
+    position: absolute;
+    opacity: 0.12;
+    pointer-events: none;
+    filter: drop-shadow(0 8px 16px rgba(15, 23, 42, 0.1));
+}
+
+.soccer-ball svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.ball-1 {
+    width: 70px;
+    height: 70px;
+    top: 15%;
+    left: 5%;
+    animation: float-ball-1 12s ease-in-out infinite alternate;
+}
+.ball-1 svg {
+    animation: rotate-ball 25s linear infinite;
+}
+
+.ball-2 {
+    width: 110px;
+    height: 110px;
+    top: 55%;
+    right: 5%;
+    animation: float-ball-2 16s ease-in-out infinite alternate;
+}
+.ball-2 svg {
+    animation: rotate-ball 35s linear infinite reverse;
+}
+
+.ball-3 {
+    width: 60px;
+    height: 60px;
+    top: 35%;
+    left: 80%;
+    animation: float-ball-3 10s ease-in-out infinite alternate;
+}
+.ball-3 svg {
+    animation: rotate-ball 20s linear infinite;
+}
+
+.ball-4 {
+    width: 85px;
+    height: 85px;
+    top: 80%;
+    left: 10%;
+    animation: float-ball-4 14s ease-in-out infinite alternate;
+}
+.ball-4 svg {
+    animation: rotate-ball 30s linear infinite reverse;
+}
+
+@keyframes float-ball-1 {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(15px, -30px); }
+}
+
+@keyframes float-ball-2 {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-25px, -45px); }
+}
+
+@keyframes float-ball-3 {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(20px, -20px); }
+}
+
+@keyframes float-ball-4 {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(10px, -40px); }
+}
+
+@keyframes rotate-ball {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
